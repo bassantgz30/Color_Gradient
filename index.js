@@ -34,7 +34,9 @@ hexInputEl.addEventListener('keyup', () => {
         inputColorBox.style.backgroundColor = input_hexColor
 
         // update the altered box color with the current slider value and the current input color
-        const altered_hexColor = alterColorByPercentage(hexInputEl.value, sliderInputEl.value)
+        const change = toggleBtnEl.classList.contains("dark") ? -sliderInputEl.value : sliderInputEl.value
+        const altered_hexColor = alterColorByPercentage(hexInputEl.value, change)
+        
         alteredColorBox.style.backgroundColor =  altered_hexColor
 
         hexInputEl.style.border = "none"
