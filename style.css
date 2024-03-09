@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    background-color: black;;
+}
+
+.container {
+    padding: 0 10px;
+}
+
+label {
+    font-size: 20px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#titleText {
+    margin: 20px;
+    font-weight: normal;
+    font-size: 50px;
+}
+
+input {
+    margin-bottom: 25px;
+}
+
+#hex-input {
+    margin-bottom: 10px;
+    margin-right: 5px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    border: none;
+}
+
+#error-txt {
+    display: inline;
+    color: red;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.instructionsUL {
+    padding-left: 30px;
+    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: white;
+}
+
+#slider-input {
+    width: 200px;
+}
+
+.box-text {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.box {
+    height: 90px;
+    width: 100%;
+    background-color: #d3e1eb;
+    margin-bottom: 10px;
+}
+
+.toggle {
+    display: flex;
+    width: 200px;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.toggle-text {
+    font-size: 20px;
+}
+
+.toggle-btn {
+    background-color: gray;
+    height: 24px;
+    width: 50px;
+    border-radius: 25px;
+    padding: 5px;
+}
+
+.inner-circle {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: white;
+    transition: all 400ms;
+}
+
+.toggle-btn.dark > .inner-circle {
+    transform: translateX(25px);
+}
+
+.toggle-btn.dark {
+    background-color: #2196F3;
+}
+
+.unselected {
+    opacity: 0.25;
+}
+
+.reset-btn {
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    text-align: center;
+    font-family: "Lilita One", sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 25px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.reset-btn:hover {
+    background-color: #2195f3b4;
+}
