@@ -8,3 +8,7 @@ Try it <a href=https://color-gradient-tool.netlify.app/>here</a>
 
 ## About:
 Simple tool to darken or lighten a color. It uses the "hex" format.
+
+<br>
+
+![image](https://github.com/bassantgz30/readme-images/assets/44124521/d9f6ade1-7e0a-41c5-b601-3215eceb11af)
