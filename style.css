@@ -31,7 +31,7 @@ input {
     margin-bottom: 25px;
 }
 
-#hex-input {
+#hexInput {
     margin-bottom: 10px;
     margin-right: 5px;
     padding: 5px 10px;
@@ -39,7 +39,7 @@ input {
     border: none;
 }
 
-#error-txt {
+#errorText {
     display: inline;
     color: red;
     font-size: 15px;
@@ -55,7 +55,7 @@ input {
     color: white;
 }
 
-#slider-input {
+#sliderInput {
     width: 200px;
 }
 
@@ -69,6 +69,8 @@ input {
     width: 100%;
     background-color: #d3e1eb;
     margin-bottom: 10px;
+    border: 2px solid black;
+    outline: 2px solid white
 }
 
 .toggle {

@@ -20,10 +20,10 @@
             
             <!-- Hex input field -->
             <label for="hex-input">Color (Hex)</label>
-            <input type="text" id="hex-input" name="hex-color" placeholder="#000000">
+            <input type="text" id="hexInput" name="hex-color" placeholder="#000000">
             
             <!-- Error message -->
-            <p id="error-txt"></p>
+            <p id="errorText"></p>
 
             <!-- Instructions list -->
             <div class="Instructions">
@@ -47,17 +47,17 @@
             </div>
 
             <!-- Slider field -->
-            <label for="slider-input" id="slider-text">0%</label>
-            <input type="range" id="slider-input" name="slider-value" class="slider"
+            <label for="slider-input" id="sliderText">0%</label>
+            <input type="range" id="sliderInput" name="slider-value" class="slider"
                 min="0" max="100" step="0.5" value="0">
 
             <!-- Input color box -->
             <p class="box-text">Input Color</p>
-            <div id="input-color" class="box"></div>
+            <div id="inputColorBox" class="box"></div>
 
             <!-- Altered color box -->
-            <p class="box-text">Altered Color</p>
-            <div id="altered-color" class="box"></div>
+            <p class="box-text" id="alteredColorText">Altered Color</p>
+            <div id="alteredColorBox" class="box"></div>
 
             <!-- Reset button -->
             <button id="resetBtn" class="reset-btn">Reset</button>

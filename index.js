@@ -1,10 +1,10 @@
-const hexInputEl = document.getElementById("hex-input")
-const outputEl = document.getElementById("input-color")
-const inputColorBox = document.getElementById("input-color")
-const alteredColorBox = document.getElementById("altered-color")
-const errorTextEl = document.getElementById("error-txt")
-const sliderTextEl = document.getElementById("slider-text")
-const sliderInputEl = document.getElementById("slider-input")
+const hexInputEl = document.getElementById("hexInput")
+const inputColorBoxEl = document.getElementById("inputColorBox")
+const alteredColorBoxEl = document.getElementById("alteredColorBox")
+const altedColorTextEl = document.getElementById("alteredColorText")
+const errorTextEl = document.getElementById("errorText")
+const sliderTextEl = document.getElementById("sliderText")
+const sliderInputEl = document.getElementById("sliderInput")
 const toggleBtnEl = document.getElementById("toggleBtn")
 const lightenText = document.getElementById('lightenText')
 const darkenText = document.getElementById('darkenText')
@@ -19,7 +19,8 @@ toggleBtnEl.addEventListener('click', () => {
 
     if(isHexColorValid(hexInputEl.value)){
         let alteredHexColor = alterColorByPercentage(hexInputEl.value, change)
-        alteredColorBox.style.backgroundColor = alteredHexColor
+        alteredColorBoxEl.style.backgroundColor = alteredHexColor
+        altedColorTextEl.textContent = `Altered Color (${alteredHexColor})`
     }
 })
 
@@ -31,13 +32,14 @@ hexInputEl.addEventListener('keyup', () => {
 
         //const strippedHex = updateHexValue(hexInput)
         const input_hexColor = updateHexValue(hexInput)  // add the #
-        inputColorBox.style.backgroundColor = input_hexColor
+        inputColorBoxEl.style.backgroundColor = input_hexColor
 
         // update the altered box color with the current slider value and the current input color
         const change = toggleBtnEl.classList.contains("dark") ? -sliderInputEl.value : sliderInputEl.value
-        const altered_hexColor = alterColorByPercentage(hexInputEl.value, change)
-        
-        alteredColorBox.style.backgroundColor =  altered_hexColor
+        const alteredHexColor = alterColorByPercentage(hexInputEl.value, change)
+
+        alteredColorBoxEl.style.backgroundColor =  alteredHexColor
+        altedColorTextEl.textContent = `Altered Color (${alteredHexColor})`
 
         hexInputEl.style.border = "none"
         hexInputEl.style.outlineColor = "black"
@@ -63,7 +65,8 @@ sliderInputEl.addEventListener('input', () => {
   
     if(isHexColorValid(hexInputEl.value)){
         let alteredHexColor = alterColorByPercentage(hexInputEl.value, change)
-        alteredColorBox.style.backgroundColor = alteredHexColor
+        alteredColorBoxEl.style.backgroundColor = alteredHexColor
+        altedColorTextEl.textContent = `Altered Color (${alteredHexColor})`
     }
 })
 
@@ -159,13 +162,15 @@ resetBtnEl.addEventListener('click',() => {
 
     if(isHexColorValid(hexInputEl.value)){
         const base_color = updateHexValue(hexInputEl.value)  // add the #
-        inputColorBox.style.backgroundColor = base_color
-        alteredColorBox.style.backgroundColor = base_color
+        inputColorBoxEl.style.backgroundColor = base_color
+        alteredColorBoxEl.style.backgroundColor = base_color
+        altedColorTextEl.textContent = `Altered Color (${base_color})`
     }
     else {
         hexInputEl.value = ""
-        inputColorBox.style.backgroundColor = "#d3e1eb"
-        alteredColorBox.style.backgroundColor = "#d3e1eb"
+        inputColorBoxEl.style.backgroundColor = "#d3e1eb"
+        alteredColorBoxEl.style.backgroundColor = "#d3e1eb"
+        altedColorTextEl.textContent = `Altered Color `
     }
 
     if(toggleBtnEl.classList.contains("dark")){
